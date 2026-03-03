@@ -6,5 +6,5 @@ env:
     value: production
 
 scripts:
-  buildCommand: echo "Using pre-built dist folder"
-  runCommand: npx serve dist -s -l 8080
+  buildCommand: npm run server:build
+  runCommand: npm run server:prod
