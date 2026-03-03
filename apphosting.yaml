@@ -1,0 +1,10 @@
+runConfig:
+  runtime: nodejs22
+
+env:
+  - variable: NODE_ENV
+    value: production
+
+scripts:
+  buildCommand: echo "Using pre-built dist folder"
+  runCommand: npx serve dist -s -l 8080

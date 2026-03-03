@@ -1,0 +1,94 @@
+lready have image (with digest): asia-east1-docker.pkg.dev/serverless-runtimes/google-22-full/builder/nodejs:nodejs_20260212_RC00_lightweight
+Warning: No cached data will be used, no cache specified.
+===> ANALYZING
+Image with name "asia-east1-docker.pkg.dev/labcopy-2e56e/firebaseapphosting-images/labcopy:build-2026-02-26-010" not found
+===> DETECTING
+target distro name/version labels not found, reading /etc/os-release file
+google.nodejs.runtime        1.0.0
+google.nodejs.npm            1.1.1
+google.nodejs.firebasebundle 0.0.1
+===> RESTORING
+===> BUILDING
+target distro name/version labels not found, reading /etc/os-release file
+=== Node.js - Runtime Using Runner (google.nodejs.runtime@1.0.0) ===
+Nodejs version not specified, using the latest available Nodejs runtime for the stack "ubuntu2204"
+2026/02/26 15:39:46 [DEBUG] GET https://dl.google.com/runtimes/ubuntu2204/nodejs/version.json
+Adding image label google.runtime-version: nodejs22
+2026/02/26 15:39:47 [DEBUG] GET https://dl.google.com/runtimes/ubuntu2204/nodejs/version.json
+***** CACHE MISS: "nodejs"
+Installing Node.js v22.22.0.
+2026/02/26 15:39:47 [DEBUG] GET https://dl.google.com/runtimes/ubuntu2204/nodejs/nodejs-22.22.0.tar.gz
+Installing the heapsize.sh exec.d script.
+=== Node.js - Npm Using Runner (google.nodejs.npm@1.1.1) ===
+***** CACHE MISS: "npm_modules"
+Installing application dependencies.
+--------------------------------------------------------------------------------
+Running "npm ci --quiet --no-fund --no-audit (NODE_ENV=production)"
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+> expo-app@1.0.0 postinstall
+> npx patch-package || true
+patch-package 8.0.1
+Applying patches...
+expo-asset@12.0.12 ✔
+added 906 packages in 16s
+Done "npm ci --quiet --no-fund --no-audit (NODE_ENV=production)" (16.579689095s)
+--------------------------------------------------------------------------------
+Running "npm run apphosting:build"
+> expo-app@1.0.0 apphosting:build
+> npx expo export --platform web
+React Compiler enabled
+Starting Metro Bundler
+Web node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 33.5%!((MISSING) 59/202)
+Web node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 33.5%!((MISSING)111/249)
+Web node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 37.0%!((MISSING)222/365)
+Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 53.0%!((MISSING)332/456)
+Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 76.4%!((MISSING)464/531)
+Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 94.5%!((MISSING)623/641)
+Web Bundling failed 24572ms node_modules/expo-router/entry.js (677 modules)
+Error: Unable to resolve module @/constants/colors from /workspace/app/(tabs)/_layout.tsx: @/constants/colors could not be found within the project or in these directories:
+  node_modules
+   7 | import React from "react";
+   8 |
+>  9 | import Colors from "@/constants/colors";
+     |                     ^
+  10 |
+  11 | function NativeTabLayout() {
+  12 |   return (
+Import stack:
+ app/(tabs)/_layout.tsx
+ | import "@/constants/colors"
+ app (require.context)
+Done "npm run apphosting:build" (26.425660822s)
+--------------------------------------------------------------------------------
+failed to build: (error ID: db64e7c7):
+{"reason":"Failed Framework Build","code":"fah/failed-framework-build","userFacingMessage":"Your application failed to run the framework build command 'npx expo export --platform web' successfully. Please check the raw log to address the error and confirm that your application builds locally before redeploying.","rawLog":"(error ID: 7b6b5505):
+> expo-app@1.0.0 apphosting:build
+> npx expo export --platform web
+React Compiler enabled
+Starting Metro Bundler
+Web node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 33.5%!!(MISSING)((MISSING) 59/202)
+Web node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 33.5%!!(MISSING)((MISSING)111/249)
+Web node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 37.0%!!(MISSING)((MISSING)222/365)
+Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 53.0%!!(MISSING)((MISSING)332/456)
+Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 76.4%!!(MISSING)((MISSING)464/531)
+Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 94.5%!!(MISSING)((MISSING)623/641)
+Web Bundling failed 24572ms node_modules/expo-router/entry.js (677 modules)
+Error: Unable to resolve module @/constants/colors from /workspace/app/(tabs)/_layout.tsx: @/constants/colors could not be found within the project or in these directories:
+  node_modules
+   7 | import React from "react";
+   8 |
+>  9 | import Colors from "@/constants/colors";
+     |                     ^
+  10 |
+  11 | function NativeTabLayout() {
+  12 |   return (
+Import stack:
+ app/(tabs)/_layout.tsx
+ | import "@/constants/colors"
+ app (require.context)","isUserAttributed":true}
+ERROR: failed to build: exit status 1

@@ -1,0 +1,196 @@
+starting build "3f3dec90-e74b-4a59-b711-e0553c596ac2"
+FETCHSOURCE
+From https://github.com/wonjaechung/lab.copy
+ * branch            9ff59d28b773687ca46c2e6ec4697c536e6af19e -> FETCH_HEAD
+HEAD is now at 9ff59d2 Add Firebase Hosting config and web build output
+GitCommit:
+9ff59d28b773687ca46c2e6ec4697c536e6af19e
+BUILD
+Starting Step #0 - "ubuntu"
+Already have image (with digest): gcr.io/cloud-builders/gcloud
+Finished Step #0 - "ubuntu"
+Starting Step #1 - "preparer"
+Pulling image: asia-east1-docker.pkg.dev/serverless-runtimes/utilities/preparer:base_20260130_18_04_RC00
+base_20260130_18_04_RC00: Pulling from serverless-runtimes/utilities/preparer
+7bd52cab96b1: Pulling fs layer
+7bd52cab96b1: Verifying Checksum
+7bd52cab96b1: Download complete
+7bd52cab96b1: Pull complete
+Digest: sha256:f54bf3bf700d4edae8a482da8431cfc540732beb53b5fddd0f85213518f381bf
+Status: Downloaded newer image for asia-east1-docker.pkg.dev/serverless-runtimes/utilities/preparer:base_20260130_18_04_RC00
+asia-east1-docker.pkg.dev/serverless-runtimes/utilities/preparer:base_20260130_18_04_RC00
+2026/02/26 15:23:08 FIREBASE_CONFIG has no availability specified, applying the default of 'BUILD' and 'RUNTIME'
+2026/02/26 15:23:08 Final app hosting schema:
+env:
+- variable: FIREBASE_CONFIG
+  value: '{"databaseURL":"","projectId":"labcopy-2e56e","storageBucket":"labcopy-2e56e.firebasestorage.app"}'
+  availability:
+  - BUILD
+  - RUNTIME
+  source: Firebase System
+- variable: FIREBASE_WEBAPP_CONFIG
+  value: '{"apiKey":"AIzaSyCQ7TaQ1_hXVI7IBJeb7Usx7kePrYdC6Z4","appId":"1:634154547349:web:27c290485b7e515f5f439c","authDomain":"labcopy-2e56e.firebaseapp.com","databaseURL":"","messagingSenderId":"634154547349","projectId":"labcopy-2e56e","storageBucket":"labcopy-2e56e.firebasestorage.app"}'
+  availability:
+  - BUILD
+  source: Firebase System
+2026/02/26 15:23:08 Final app hosting schema:
+env:
+- variable: FIREBASE_CONFIG
+  value: '{"databaseURL":"","projectId":"labcopy-2e56e","storageBucket":"labcopy-2e56e.firebasestorage.app"}'
+  availability:
+  - BUILD
+  - RUNTIME
+  source: Firebase System
+- variable: FIREBASE_WEBAPP_CONFIG
+  value: '{"apiKey":"AIzaSyCQ7TaQ1_hXVI7IBJeb7Usx7kePrYdC6Z4","appId":"1:634154547349:web:27c290485b7e515f5f439c","authDomain":"labcopy-2e56e.firebaseapp.com","databaseURL":"","messagingSenderId":"634154547349","projectId":"labcopy-2e56e","storageBucket":"labcopy-2e56e.firebasestorage.app"}'
+  availability:
+  - BUILD
+  source: Firebase System
+Finished Step #1 - "preparer"
+Starting Step #2 - "pre-buildpack"
+Pulling image: asia-east1-docker.pkg.dev/serverless-runtimes/google-22-full/builder/nodejs:nodejs_20260220a_RC00_lightweight
+nodejs_20260220a_RC00_lightweight: Pulling from serverless-runtimes/google-22-full/builder/nodejs
+5d1190f163bb: Already exists
+f494517dbbed: Already exists
+790266d15562: Already exists
+bc6f0521d275: Pulling fs layer
+e74295754f2f: Pulling fs layer
+ed980237fe76: Pulling fs layer
+6c619c6655a3: Pulling fs layer
+5b5c04bab9ee: Pulling fs layer
+8622b4d55fcc: Pulling fs layer
+1d6a34bc3644: Pulling fs layer
+fe0a88c014e5: Pulling fs layer
+b1fd759501bc: Pulling fs layer
+141edec40997: Pulling fs layer
+78613c92ea9e: Pulling fs layer
+34ce8ba30961: Pulling fs layer
+e6178d2c0976: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+1d6a34bc3644: Waiting
+fe0a88c014e5: Waiting
+b1fd759501bc: Waiting
+141edec40997: Waiting
+78613c92ea9e: Waiting
+34ce8ba30961: Waiting
+e6178d2c0976: Waiting
+4f4fb700ef54: Waiting
+6c619c6655a3: Verifying Checksum
+6c619c6655a3: Download complete
+bc6f0521d275: Verifying Checksum
+bc6f0521d275: Download complete
+ed980237fe76: Verifying Checksum
+ed980237fe76: Download complete
+e74295754f2f: Verifying Checksum
+e74295754f2f: Download complete
+8622b4d55fcc: Verifying Checksum
+8622b4d55fcc: Download complete
+5b5c04bab9ee: Verifying Checksum
+5b5c04bab9ee: Download complete
+fe0a88c014e5: Download complete
+bc6f0521d275: Pull complete
+141edec40997: Download complete
+34ce8ba30961: Verifying Checksum
+34ce8ba30961: Download complete
+78613c92ea9e: Verifying Checksum
+78613c92ea9e: Download complete
+e6178d2c0976: Verifying Checksum
+e6178d2c0976: Download complete
+1d6a34bc3644: Verifying Checksum
+1d6a34bc3644: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+e74295754f2f: Pull complete
+b1fd759501bc: Verifying Checksum
+b1fd759501bc: Download complete
+ed980237fe76: Pull complete
+6c619c6655a3: Pull complete
+5b5c04bab9ee: Pull complete
+8622b4d55fcc: Pull complete
+1d6a34bc3644: Pull complete
+fe0a88c014e5: Pull complete
+b1fd759501bc: Pull complete
+141edec40997: Pull complete
+78613c92ea9e: Pull complete
+34ce8ba30961: Pull complete
+e6178d2c0976: Pull complete
+4f4fb700ef54: Pull complete
+Digest: sha256:e097551e9812280057c6b385898f1ac811cbe29a9ab0e17e4767864828cff01b
+Status: Downloaded newer image for asia-east1-docker.pkg.dev/serverless-runtimes/google-22-full/builder/nodejs:nodejs_20260220a_RC00_lightweight
+asia-east1-docker.pkg.dev/serverless-runtimes/google-22-full/builder/nodejs:nodejs_20260220a_RC00_lightweight
+Preparing directory /layers
+Preparing directory /workspace
+Preparing directory /builder/home
+Preparing directory /builder/outputs
+Preparing directory /platform/env
+Passing build environment variable X_GOOGLE_TARGET_PLATFORM to buildpacks
+Passing build environment variable APPHOSTINGYAML_FILEPATH to buildpacks
+Passing build environment variable FIREBASE_OUTPUT_BUNDLE_DIR to buildpacks
+Passing build environment variable FIREBASE_APP_HOSTING to buildpacks
+Passing build environment variable NEXTJS_ADAPTER_VERSION to buildpacks
+Passing build environment variable ANGULAR_ADAPTER_VERSION to buildpacks
+Passing build environment variable GOOGLE_BUILDABLE to buildpacks
+Passing build environment variable BUILDER_OUTPUT to buildpacks
+Finished Step #2 - "pre-buildpack"
+Starting Step #3 - "build"
+Already have image (with digest): asia-east1-docker.pkg.dev/serverless-runtimes/google-22-full/builder/nodejs:nodejs_20260220a_RC00_lightweight
+Warning: No cached data will be used, no cache specified.
+===> ANALYZING
+Image with name "asia-east1-docker.pkg.dev/labcopy-2e56e/firebaseapphosting-images/labcopy:build-2026-02-26-000" not found
+===> DETECTING
+target distro name/version labels not found, reading /etc/os-release file
+google.nodejs.runtime        1.0.0
+google.nodejs.npm            1.1.1
+google.nodejs.firebasebundle 0.0.1
+===> RESTORING
+===> BUILDING
+target distro name/version labels not found, reading /etc/os-release file
+=== Node.js - Runtime Using Runner (google.nodejs.runtime@1.0.0) ===
+Nodejs version not specified, using the latest available Nodejs runtime for the stack "ubuntu2204"
+2026/02/26 15:23:15 [DEBUG] GET https://dl.google.com/runtimes/ubuntu2204/nodejs/version.json
+Adding image label google.runtime-version: nodejs22
+2026/02/26 15:23:15 [DEBUG] GET https://dl.google.com/runtimes/ubuntu2204/nodejs/version.json
+***** CACHE MISS: "nodejs"
+Installing Node.js v22.22.0.
+2026/02/26 15:23:15 [DEBUG] GET https://dl.google.com/runtimes/ubuntu2204/nodejs/nodejs-22.22.0.tar.gz
+Installing the heapsize.sh exec.d script.
+=== Node.js - Npm Using Runner (google.nodejs.npm@1.1.1) ===
+***** CACHE MISS: "npm_modules"
+Installing application dependencies.
+--------------------------------------------------------------------------------
+Running "npm ci --quiet --no-fund --no-audit (NODE_ENV=production)"
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+> expo-app@1.0.0 postinstall
+> patch-package
+sh: 1: patch-package: not found
+npm error code 127
+npm error path /workspace
+npm error command failed
+npm error command sh -c patch-package
+npm error A complete log of this run can be found in: /www-data-home/.npm/_logs/2026-02-26T15_23_19_497Z-debug-0.log
+Done "npm ci --quiet --no-fund --no-audit (NODE_ENV=production)" (23.865536331s)
+--------------------------------------------------------------------------------
+failed to build: (error ID: 7fa33aaa):
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+> expo-app@1.0.0 postinstall
+> patch-package
+sh: 1: patch-package: not found
+npm error code 127
+npm error path /workspace
+npm error command failed
+npm error command sh -c patch-package
+npm error A complete log of this run can be found in: /www-data-home/.npm/_logs/2026-02-26T15_23_19_497Z-debug-0.log
+ERROR: failed to build: exit status 1
+Finished Step #3 - "build"
+ERROR
+ERROR: build step 3 "asia-east1-docker.pkg.dev/serverless-runtimes/google-22-full/builder/nodejs:nodejs_20260220a_RC00_lightweight" failed: step exited with non-zero status: 51
